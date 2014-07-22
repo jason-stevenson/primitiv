@@ -15,24 +15,31 @@ body {
   color: #fff;
   padding: 2em;
   z-index: 50;
-  position: fixed;
-  top: 0;
   display: block;
   width: 100%;
+  overflow: hidden;
+  height: 100px;
 }
-/* line 29, ../sass/app.scss */
+/* line 30, ../sass/app.scss */
+#header .about {
+  float: left;
+  clear: left;
+  margin-top: 100px;
+}
+/* line 35, ../sass/app.scss */
 #header .logo {
   font-size: 2em;
   float: left;
 }
-/* line 33, ../sass/app.scss */
+/* line 39, ../sass/app.scss */
 #header ul {
   list-style-type: none;
   float: right;
   padding-right: 50px;
   display: block;
+  margin-top: -80px;
 }
-/* line 39, ../sass/app.scss */
+/* line 46, ../sass/app.scss */
 #header li {
   padding: 0;
   padding-right: 0.8em;
@@ -40,41 +47,45 @@ body {
   display: inline-block;
   text-transform: uppercase;
 }
-/* line 45, ../sass/app.scss */
+/* line 54, ../sass/app.scss */
 #header li a {
-  padding: 0.8em;
-  background-color: black;
+  display: block;
+  padding: 1.5em;
   text-decoration: none;
   color: #fff;
 }
+/* line 61, ../sass/app.scss */
+#header li a:hover {
+  background-color: #990023;
+}
 
-/* line 54, ../sass/app.scss */
+/* line 68, ../sass/app.scss */
 #main {
-  margin-top: 130px;
   color: pink;
 }
 
-/* line 58, ../sass/app.scss */
+/* line 72, ../sass/app.scss */
 .menu-item {
   position: relative;
+  top: 15px;
   z-index: 20;
   display: block;
-  width: 250px;
+  width: 400px;
   float: left;
-  background-color: green;
+  background-color: black;
 }
-/* line 65, ../sass/app.scss */
+/* line 80, ../sass/app.scss */
 .menu-item .banner {
-  height: 140px;
+  height: 240px;
   overflow: hidden;
 }
-/* line 66, ../sass/app.scss */
+/* line 81, ../sass/app.scss */
 .menu-item .banner img {
   width: auto;
   height: 100%;
 }
 
-/* line 75, ../sass/app.scss */
+/* line 90, ../sass/app.scss */
 #footer {
   background-color: #0f131a;
   position: fixed;
