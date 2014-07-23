@@ -10,6 +10,13 @@
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/app.css">
 
+        <link href="http://vjs.zencdn.net/4.6/video-js.css" rel="stylesheet">
+        <script src="http://vjs.zencdn.net/4.6/video.js"></script>
+        <style type="text/css">
+          .vjs-default-skin .vjs-play-progress,
+          .vjs-default-skin .vjs-volume-level { background-color: #a6253b }
+          .vjs-default-skin .vjs-control-bar { font-size: 72% }
+        </style>
 
     </head>
     <body>
@@ -30,17 +37,68 @@
 
 
         <div id="main">
-            
+                
+               <!--  <video id="MY_VIDEO_1" class="video-js vjs-default-skin" controls
+                 preload="auto" width="1%" height="264" poster="video.jpg"
+                 data-setup="{}">
+                 <source src="video.mp4" type='video/mp4'>
+                 <source src="video.webm" type='video/webm'>
+                 <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+                </video> -->
+
+
+
                 <div class="menu-item">
                     <div class="banner" id="part">
                         <img src="img/banner1.jpg">
+                        <div class="info">
+                            <h5>Participate Ident</h5>
+                            <p>Cinema Trailer</p>
+                        </div>
                     </div>
                 </div>
                  <div class="menu-item">
                     <div class="banner" id="part">
                         <img src="img/banner2.jpg">
+                        <div class="info">
+                            <h5>Torn Devotion</h5>
+                            <p>Cinema Trailer</p>
+                        </div>
                     </div>
                 </div>
+                <div class="menu-item">
+                    <div class="banner" id="part">
+                        <img src="img/banner3.jpg">
+                        <div class="info">
+                            <h5>Taste of things to come</h5>
+                            <p>Film Clip</p>
+                        </div>
+                    </div>
+                </div>
+                 <div class="menu-item">
+                    <div class="banner" id="part">
+                        <img src="img/banner4.jpg">
+                        <div class="info">
+                            <h5>The Concourse</h5>
+                            <p>Touchscreen</p>
+                        </div>
+                    </div>
+                </div>
+                 <div class="menu-item">
+                    <div class="banner" id="part">
+                        <img src="img/banner5.jpg">
+                    </div>
+                </div>
+                 <div class="menu-item">
+                    <div class="banner" id="part">
+                        <img src="img/banner5.jpg">
+                    </div>
+                </div>
+
+
+
+
+
                 <div class="menu-item">
                     <div class="banner" id="part">
                         <img src="img/banner3.jpg">
@@ -56,7 +114,21 @@
                         <img src="img/banner5.jpg">
                     </div>
                 </div>
-               
+                 <div class="menu-item">
+                    <div class="banner" id="part">
+                        <img src="img/banner5.jpg">
+                    </div>
+                </div>
+                 <div class="menu-item">
+                    <div class="banner" id="part">
+                        <img src="img/banner1.jpg">
+                    </div>
+                </div>
+                 <div class="menu-item">
+                    <div class="banner" id="part">
+                        <img src="img/banner2.jpg">
+                    </div>
+                </div>
 
 
                  
@@ -66,7 +138,15 @@
 
 
 
-        <div id="footer">Footer</div>
+        <div id="footer">
+            <div class="contact">
+                 <h5>Contact me</h5>
+                <form>
+                 First name: <input type="text" name="firstname"><br>
+                 Last name: <input type="text" name="lastname">
+                </form>
+            </div>
+        </div>
 
 
 
