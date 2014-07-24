@@ -1,9 +1,38 @@
 /* line 7, ../sass/app.scss */
 body {
+  height: 100%;
+  margin: 0;
   background-color: #0f131a;
 }
 
-/* line 18, ../sass/app.scss */
+/* line 15, ../sass/app.scss */
+#page {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+/* line 22, ../sass/app.scss */
+.side-menu {
+  background-color: black;
+  width: 350px;
+  z-index: 40;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -350px;
+}
+/* line 32, ../sass/app.scss */
+.side-menu ul {
+  list-style-type: none;
+}
+/* line 34, ../sass/app.scss */
+.side-menu ul li {
+  color: #fff;
+  padding: 2em;
+}
+
+/* line 42, ../sass/app.scss */
 #header {
   overflow: auto;
   background-color: #ff003b;
@@ -15,7 +44,7 @@ body {
   overflow: hidden;
   height: 100px;
 }
-/* line 32, ../sass/app.scss */
+/* line 56, ../sass/app.scss */
 #header .about {
   float: left;
   clear: left;
@@ -23,13 +52,13 @@ body {
   padding-left: 2em;
   width: 40%;
 }
-/* line 39, ../sass/app.scss */
+/* line 63, ../sass/app.scss */
 #header .logo {
   font-size: 2em;
   float: left;
   padding-left: 1em;
 }
-/* line 44, ../sass/app.scss */
+/* line 68, ../sass/app.scss */
 #header ul {
   list-style-type: none;
   float: right;
@@ -37,7 +66,7 @@ body {
   display: block;
   margin-top: -30px;
 }
-/* line 51, ../sass/app.scss */
+/* line 75, ../sass/app.scss */
 #header li {
   padding: 0;
   padding-right: 0.8em;
@@ -45,45 +74,73 @@ body {
   display: inline-block;
   text-transform: uppercase;
 }
-/* line 59, ../sass/app.scss */
+/* line 83, ../sass/app.scss */
 #header li a {
   display: block;
   padding: 1.5em;
   text-decoration: none;
   color: #fff;
 }
-/* line 66, ../sass/app.scss */
+/* line 90, ../sass/app.scss */
 #header li a:hover {
   background-color: #990023;
 }
 
-/* line 74, ../sass/app.scss */
+/* line 98, ../sass/app.scss */
 #main {
-  margin-top: -5px;
+  margin-top: 0px;
   margin-bottom: 100px;
   color: white;
   width: 100%;
   overflow: hidden;
+  background-color: #0f131a;
+}
+/* line 109, ../sass/app.scss */
+#main .largeBanner {
+  background-color: black;
+  height: 400px;
+  background-size: cover;
+}
+/* line 117, ../sass/app.scss */
+#main .largeBanner.part {
+  background-image: url("../img/part.jpg");
+}
+/* line 120, ../sass/app.scss */
+#main .largeBanner.td {
+  background-image: url("../img/td.jpg");
+}
+/* line 123, ../sass/app.scss */
+#main .largeBanner.taste {
+  background-image: url("../img/taste.jpg");
+}
+/* line 130, ../sass/app.scss */
+#main .content {
+  padding: 0 2em;
+}
+/* line 134, ../sass/app.scss */
+#main .content h1 {
+  font-size: 2.2em;
+}
+/* line 137, ../sass/app.scss */
+#main .content p {
+  font-size: 1.25em;
+  line-height: 1.6em;
+  width: 70%;
 }
 
-/* line 83, ../sass/app.scss */
-.loadContent {
-  padding: 3em;
-}
-
-/* line 87, ../sass/app.scss */
+/* line 148, ../sass/app.scss */
 .menu-item {
   float: left;
   z-index: 20;
   width: 33.33%;
   background-color: black;
 }
-/* line 95, ../sass/app.scss */
+/* line 156, ../sass/app.scss */
 .menu-item .banner {
   height: 150px;
   overflow: hidden;
 }
-/* line 98, ../sass/app.scss */
+/* line 159, ../sass/app.scss */
 .menu-item .banner .info {
   z-index: 15;
   position: absolute;
@@ -94,7 +151,7 @@ body {
   text-align: left;
   padding-top: 5%;
 }
-/* line 108, ../sass/app.scss */
+/* line 169, ../sass/app.scss */
 .menu-item .banner .info h5, .menu-item .banner .info p {
   text-transform: uppercase;
   font-size: 0.8em;
@@ -102,11 +159,11 @@ body {
   margin: 0;
   font-weight: lighter;
 }
-/* line 115, ../sass/app.scss */
+/* line 176, ../sass/app.scss */
 .menu-item .banner .info p {
   color: #ff003b;
 }
-/* line 120, ../sass/app.scss */
+/* line 181, ../sass/app.scss */
 .menu-item .banner img {
   width: 100%;
   height: auto;
@@ -114,7 +171,7 @@ body {
   z-index: 20;
 }
 
-/* line 130, ../sass/app.scss */
+/* line 191, ../sass/app.scss */
 #footer {
   color: white;
   background-color: #06070a;
@@ -125,16 +182,23 @@ body {
   width: 100%;
   display: block;
 }
-/* line 140, ../sass/app.scss */
+/* line 200, ../sass/app.scss */
+#footer p {
+  width: 280px;
+  float: left;
+}
+/* line 204, ../sass/app.scss */
 #footer h5 {
   font-size: 1.5em;
   padding: 2em 2em 0em 2em;
 }
-/* line 144, ../sass/app.scss */
+/* line 208, ../sass/app.scss */
 #footer form {
   padding: 0 3em;
+  margin-top: -30px;
 }
-/* line 146, ../sass/app.scss */
+/* line 211, ../sass/app.scss */
 #footer form input {
   margin-bottom: 1em 0;
+  font-size: 1.5em;
 }

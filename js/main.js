@@ -5,7 +5,10 @@
 $( document ).ready(function() {
 
    	var i = -1;
+   	var work;
 	var menutl = new TimelineLite();
+
+	var projects = ["part", "td", "taste"];
 
 
 	// Set the intial scale of the menu items
@@ -13,7 +16,7 @@ $( document ).ready(function() {
 
 
 
-	// NAv
+	// Nav
  	// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
@@ -28,12 +31,15 @@ $( document ).ready(function() {
 
 	// Expand the main nav on rollover
  	$('#header li').mouseover(function() {
-	   TweenMax.to($("#header"), 0.8, {paddingBottom:"8em", ease:Sine.easeInOut});
+	   TweenMax.to($("#header"), 0.8, {paddingBottom:"9em", ease:Sine.easeInOut});
 	  })
 
  	$('#header').mouseleave(function() {
  		TweenMax.to($("#header"), 1.5,  { paddingBottom:"0em", ease:Bounce.easeOut});
 	  })
+
+
+
 
 
 
@@ -64,8 +70,77 @@ $( document ).ready(function() {
 		var info = $(this).find('.info');
 		TweenLite.to(info, 0.8, {x:0, ease:Sine.easeInOut});
 
-		
 	  })
+
+
+ 	// Get the selected content
+ 	$('.menu-item').click(function() {
+
+ 		var index = $( ".menu-item" ).index( this );
+ 		work = index;
+
+ 		hideMenuItems();
+
+	  })
+
+
+ 	// Hide menu after selction is made
+ 	function hideMenuItems(){
+ 		var tl = new TimelineLite({onComplete:showWork});
+ 		var i = $('.menu-item').length;
+
+		$( ".menu-item" ).each(function( index ) {
+	 		
+			 tl.insert( TweenLite.to(this, 1, {height:0}) );
+		
+		});
+ 	}
+
+ 	function showWork(){
+ 		loadWork(projects[work]);
+ 	}
+
+
+
+
+
+
+
+
+     function loadProfile(){
+             $.get( "profile.html", function( data ) {
+              $( "#main" ).html( data );
+            });
+        }
+       
+        function loadWork(id){
+        	// alert(id)
+           
+
+              $.get( "work.html", function( data ) {
+              		$( "#main" ).html( data );
+              		 $( "#main .largeBanner" ).toggleClass(projects[work])
+            	});
+
+             
+        }
+         function loadContact(){
+             $.get( "contact-info.html", function( data ) {
+              $( "#main" ).html( data );
+            });
+        }
+
+        $("#header #profile").click(function(){
+            loadProfile();
+        });
+
+         $("#header #work").click(function(){
+             loadWork(id);
+        })
+          $("#header #contact").click(function(){
+             loadContact();
+        })
+
 
 
 
@@ -75,7 +150,7 @@ $( document ).ready(function() {
  	// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
  	$('#footer').mouseover(function() {
-	   TweenMax.to(this, 1, {height:450, ease:Quad.easeOut});
+	   TweenMax.to(this, 0.7, {height:270, ease:Quad.easeOut});
 
 
 	  })
@@ -90,10 +165,25 @@ $( document ).ready(function() {
 
 
 
+ 	function offCanvas(){
+ 		TweenMax.to($('#page'), 0.3, {transform:"translateX(300px)", ease:Sine.easeInOut});
+
+ 	}
+
+
+ 	$('.logo').click(function() {
+ 		 offCanvas();
+	})
+
+	$('#main').mouseover(function() {
+ 		 TweenMax.to($('#page'), 0.4, {transform:"translateX(0px)", ease:Sine.easeInOut});
+	})
+
+
+
 
    $( window ).resize(function() {
-  		 // $( "#footer" ).width();
-  		 // TweenLite.to('#footer', 1, {height:h/2});
+  		
 	})
 
 });

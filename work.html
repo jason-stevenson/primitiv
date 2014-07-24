@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="no-js">
+     <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/app.css">
+    </head>
+    <body>
+
+	<div class="loadContent">
+		
+			<div class="largeBanner"></div>
+			<div class="title"><h2>Project title</h2></div>
+			<div class="content"><p>function loadProfile(){$.get( "data.html", function( data ) {
+         		</p>
+         	</div>
+	</div>
+    
+
+	
+            
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script src="js/vendor/jquery-1.11.0.min.js"></script>
+
+   
+
+	<script>
+			TweenLite.to($( ".loadContent" ), 0, {height:0});
+			TweenLite.to($( ".loadContent" ), 1.4, {height:450, ease:Bounce.easeOut ,delay:0.3});
+
+		</script>
+    </body>
+</html>
