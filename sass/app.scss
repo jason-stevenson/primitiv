@@ -33,7 +33,8 @@ body{
 		float: left;
 		clear: left;
 		margin-top: 100px;
-		padding-left: 1em;
+		padding-left:2em;
+		width: 40%;
 	}
 	.logo{
 		font-size: 2em;
@@ -45,7 +46,7 @@ body{
 		float: right;
 		padding-right: 50px;
 		display: block;
-		margin-top: -80px;
+		margin-top: -30px;
 	}
 	li{
 
@@ -78,17 +79,21 @@ body{
 	overflow:hidden;
 	
 }
+
+.loadContent{
+	padding:3em;
+}
+
 .menu-item{
 	// position: relative;
 	// top:10px;
 	float:left;
 	z-index:20;
-	width:33.3%;
-	margin-top:15px;
+	width:33.33%;
 
 	background-color: black;
 	.banner{
-		height: 100px;
+		height: 150px;
 
 		.info{
 			z-index:15;
@@ -102,7 +107,7 @@ body{
 
 			h5, p{
 				text-transform: uppercase;
-				font-size: 0.6em;
+				font-size: 0.8em;
 				padding:0; margin:0;
 				font-weight: lighter;
 			}
@@ -135,5 +140,11 @@ body{
 	h5{
 		font-size: 1.5em;
 		padding:2em 2em 0em 2em;
+	}
+	form{
+		padding: 0 3em;
+		input{
+			margin-bottom: 1em 0;
+		}
 	}
 }

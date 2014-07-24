@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/app.css">
+    </head>
+    <body>
+
+    
+
+        <div id="header">
+            <div class="logo">PRIMITIVE</div>
+            <div class="about">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</div>
+            <ul>
+                <li id="profile"><a href="#">Profile</a></li>
+                <li id="work"><a href="#">Work</a></li>
+                <li id="contact"><a href="#">Contact</a></li>
+
+            </ul>
+        </div>
+
+
+        <div id="main">
+            
+        </div>
+        
+        <div id="footer">
+            
+        </div>
+    
+
+
+
+
+
+
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+        <script src="js/vendor/jquery-1.11.0.min.js"></script>
+
+
+        <script src="js/main.js"></script>
+        <script>
+
+         
+
+        function loadProfile(){
+             $.get( "data.html", function( data ) {
+              $( "#main" ).html( data );
+            });
+        }
+       
+        function loadWork(){
+              $( "#main" ).load('index.html');
+        }
+         function loadContact(){
+             $.get( "contact-info.html", function( data ) {
+              $( "#main" ).html( data );
+            });
+        }
+
+        $("#header #profile").click(function(){
+            loadProfile();
+        })
+
+         $("#header #work").click(function(){
+             loadWork();
+        })
+          $("#header #contact").click(function(){
+             loadContact();
+        })
+
+
+      
+
+
+
+        </script>
+
+            
+
+    </body>
+</html>
